@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react';
 
 const inicio = () => {
     return (
@@ -8,4 +8,4 @@ const inicio = () => {
     )
 }
 
-export default inicio
+export default inicio;

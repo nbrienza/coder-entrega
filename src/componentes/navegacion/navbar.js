@@ -1,32 +1,30 @@
-import react from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
-
+import './navbar.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = () => {
-    return (
-          <nav className="navbar">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  inicio
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/about" className="nav-link">
-                  imagenes
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/contact" className="nav-link">
-                  catalogo
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        );
-      }
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Link to="/" className="navbar-brand">Mi Sitio</Link>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">Inicio</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/imagenes" className="nav-link">Imágenes</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/catalogo" className="nav-link">Catálogo</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar
-
-
+export default Navbar;
